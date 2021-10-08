@@ -1,0 +1,44 @@
+package com.study.compose.page.main
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.text.ClickableText
+import androidx.compose.material.Scaffold
+import androidx.compose.material.TopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.study.compose.navigation.Page
+
+
+@Composable
+fun MainPage(navController: NavController) {
+    Scaffold(
+        backgroundColor = Color.White,
+        topBar = {
+            TopAppBar {
+
+            }
+        }
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            ClickableText(text = AnnotatedString("Layout"), onClick = {
+                navController.navigate(Page.LayoutPage.route)
+            })
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun MainPagePreview() {
+    MainPage(navController = rememberNavController())
+}
