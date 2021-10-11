@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     composable(
                         route = Screen.LayoutScreen.route
                     ) {
-                        LayoutScreen()
+                        LayoutScreen(navController = navController)
                     }
                 }
             }
