@@ -1,4 +1,4 @@
-package com.study.compose.page.main
+package com.study.compose.screen.main
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,8 +17,8 @@ import com.study.compose.navigation.Screen
 
 
 @Composable
-fun MainScreen(navController: NavController, viewModel: MainViewModel = hiltViewModel()) {
-    val state = viewModel.state.value
+fun MainScreen(navController: NavController, screenViewModel: MainScreenViewModel = hiltViewModel()) {
+    val state = screenViewModel.screenState.value
     Scaffold(
         backgroundColor = Color.White,
         topBar = {

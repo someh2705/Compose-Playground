@@ -1,4 +1,4 @@
-package com.study.compose.page.layout
+package com.study.compose.screen.layout
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
@@ -9,7 +9,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun LayoutScreen(navController: NavController, viewModel: LayoutViewModel = hiltViewModel()) {
+fun LayoutScreen(navController: NavController, screenViewModel: LayoutScreenViewModel = hiltViewModel()) {
+    val state = screenViewModel.screenState.value
     Scaffold(
         backgroundColor = Color.White,
         topBar = {
