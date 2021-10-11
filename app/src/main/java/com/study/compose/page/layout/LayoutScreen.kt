@@ -1,19 +1,16 @@
 package com.study.compose.page.layout
 
 import androidx.compose.material.Scaffold
-import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun LayoutPage() {
+fun LayoutScreen() {
     Scaffold(
         backgroundColor = Color.White,
         topBar = {
-            TopAppBar {
 
-            }
         }
     ) {
 
@@ -23,5 +20,5 @@ fun LayoutPage() {
 @Preview(showBackground = true)
 @Composable
 fun LayoutPagePreview() {
-    LayoutPage()
+    LayoutScreen()
 }

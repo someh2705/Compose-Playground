@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.Scaffold
-import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -13,17 +12,15 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.study.compose.navigation.Page
+import com.study.compose.navigation.Screen
 
 
 @Composable
-fun MainPage(navController: NavController) {
+fun MainScreen(navController: NavController) {
     Scaffold(
         backgroundColor = Color.White,
         topBar = {
-            TopAppBar {
 
-            }
         }
     ) {
         Column(
@@ -31,7 +28,7 @@ fun MainPage(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             ClickableText(text = AnnotatedString("Layout"), onClick = {
-                navController.navigate(Page.LayoutPage.route)
+                navController.navigate(Screen.LayoutScreen.route)
             })
         }
     }
@@ -40,5 +37,5 @@ fun MainPage(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun MainPagePreview() {
-    MainPage(navController = rememberNavController())
+    MainScreen(navController = rememberNavController())
 }
